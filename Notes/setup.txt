@@ -1,0 +1,6 @@
+Clone Repo so I do not need user name and password
+git clone https://shepherdsg@github.com/shepherdsg/ember-d3
+
+Increase amount of Inotify watchers
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
