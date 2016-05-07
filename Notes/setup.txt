@@ -1,6 +1,15 @@
-Clone Repo so I do not need user name and password
-git clone https://shepherdsg@github.com/shepherdsg/ember-d3
 
 Increase amount of Inotify watchers
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+
+Clone Repo so I do not need user name and password
+$ sudo apt-get install libgnome-keyring-dev
+$ cd /usr/share/doc/git/contrib/credential/gnome-keyring
+$ sudo make
+$ sudo rm git-credential-gnome-keyring.o
+$ sudo mv git-credential-gnome-keyring /usr/bin
+$ git config --global credential.helper gnome-keyring
+
+git clone https://shepherdsg@github.com/shepherdsg/ember-d3
 
